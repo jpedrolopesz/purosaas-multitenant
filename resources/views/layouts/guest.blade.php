@@ -15,7 +15,7 @@
 
 
         <!-- Scripts -->
-        @vite(['public/css/app.css', 'public/js/app.js'])
+        @vite(['resources/js/app.js'])
 
         <script src="https://js.stripe.com/v3/"></script>
 

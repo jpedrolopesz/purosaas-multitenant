@@ -14,7 +14,7 @@
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
         <!-- Scripts -->
-        @vite(['public/css/app.css','public/js/app.js','public/js/index.js', 'public/css/styles.css'])
+        @vite(['resources/js/app.js','resources/js/index.js'])
 
     </head>
     <body class="bg-gray-50">
