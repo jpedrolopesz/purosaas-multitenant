@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import dns from 'dns'
-import basicSsl from '@vitejs/plugin-basic-ssl'
 
 
 dns.setDefaultResultOrder('verbatim')
