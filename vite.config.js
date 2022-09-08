@@ -16,7 +16,5 @@ export default defineConfig({
         }),
 
     ],
-    server: {
-        origin: 'https://purossas.com'
-    }
+
 });
