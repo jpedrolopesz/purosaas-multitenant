@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
     <!-- Scripts -->
 
-    <link rel="stylesheet" href="{{ mix('resources/css/app.css') }}">
-    <link rel="stylesheet" href="{{ mix('resources/css/styles.css') }}">
+    <link rel="stylesheet" href="{{ mix('public/css/app.css') }}">
+    <link rel="stylesheet" href="{{ mix('public/css/styles.css') }}">
 
 
     <!-- Scripts -->
-    <script src="{{ mix('resources/js/app.js') }}" defer></script>
-    <script src="{{ mix('resources/js/index.js') }}" defer></script>
+    <script src="{{ mix('public/js/app.js') }}" defer></script>
+    <script src="{{ mix('public/js/index.js') }}" defer></script>
 </head>
 <body class="bg-gray-50">
 

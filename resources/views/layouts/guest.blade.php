@@ -12,10 +12,10 @@
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
-        <link rel="stylesheet" href="{{ mix('resources/css/app.css') }}">
+        <link rel="stylesheet" href="{{ mix('public/css/app.css') }}">
 
         <!-- Scripts -->
-        <script src="{{ mix('resources/js/app.js') }}" defer></script>
+        <script src="{{ mix('public/js/app.js') }}" defer></script>
 
         <script src="https://js.stripe.com/v3/"></script>
 
