@@ -55,7 +55,7 @@
                                                     Cancel Plan</button>
                                             </form>
                                         @endif
-                                        @if (tenant()->subscription('default')->cancelled())
+                                        @if (tenant()->subscription('default')->cancel())
                                             <a  href="{{route('tenant.subscription.subscription',$plan->id)}}" type="button" class="btn bg-gray-300 hover:bg-indigo-600 text-white w-full ">
                                                 Reactivate
                                             </a>
