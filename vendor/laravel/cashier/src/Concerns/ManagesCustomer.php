@@ -79,10 +79,6 @@ trait ManagesCustomer
             $options['address'] = $address;
         }
 
-        if (! array_key_exists('preferred_locales', $options) && $locales = $this->stripePreferredLocales()) {
-            $options['preferred_locales'] = $locales;
-        }
-
         // Here we will create the customer instance on Stripe and store the ID of the
         // user from Stripe. This ID will correspond with the Stripe user instances
         // and allow us to retrieve users from Stripe later when we need to work.
@@ -186,16 +182,6 @@ trait ManagesCustomer
     }
 
     /**
-     * Get the locales that should be synced to Stripe.
-     *
-     * @return array|null
-     */
-    public function stripePreferredLocales()
-    {
-        // return ['en'];
-    }
-
-    /**
      * Sync the customer's information to Stripe.
      *
      * @return \Stripe\Customer
@@ -207,7 +193,6 @@ trait ManagesCustomer
             'email' => $this->stripeEmail(),
             'phone' => $this->stripePhone(),
             'address' => $this->stripeAddress(),
-            'preferred_locales' => $this->stripePreferredLocales(),
         ]);
     }
 

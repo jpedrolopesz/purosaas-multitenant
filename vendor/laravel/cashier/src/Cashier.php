@@ -18,14 +18,14 @@ class Cashier
      *
      * @var string
      */
-    const VERSION = '14.1.1';
+    const VERSION = '13.16.0';
 
     /**
      * The Stripe API version.
      *
      * @var string
      */
-    const STRIPE_VERSION = '2022-08-01';
+    const STRIPE_VERSION = '2020-08-27';
 
     /**
      * The base URL for the Stripe API.

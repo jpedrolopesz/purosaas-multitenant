@@ -47,7 +47,7 @@
                                 <!-- CTA -->
                                 <div class="">
                                     @if (tenant()->subscribedToPrice($plan->stripe_id, 'default'))
-                                        @if (!tenant()->subscription( 'default')->cancel())
+                                        @if (!tenant()->subscription( 'default')->cancelled())
                                             <form action="{{route('tenant.subscription.cancel')}}"  method="post">
                                                 @csrf
 
@@ -55,10 +55,17 @@
                                                     Cancel Plan</button>
                                             </form>
                                         @endif
-                                        @if (tenant()->subscription('default')->cancel())
-                                            <a  href="{{route('tenant.subscription.subscription',$plan->id)}}" type="button" class="btn bg-gray-300 hover:bg-indigo-600 text-white w-full ">
-                                                Reactivate
-                                            </a>
+                                        @if (tenant()->subscription('default')->cancelled())
+                                                <form action="{{route('tenant.account.subscription.store')}}" method="post">
+                                                    @csrf
+
+                                                    <button name="plan" id="plan" value="{{$plan->stripe_id}}"
+                                                            class="btn bg-indigo-500 hover:bg-indigo-600 text-white w-full">
+                                                        Reactive
+                                                    </button>
+
+
+                                                </form>
                                         @endif
                                     @else
                                         @if (!tenant()->subscription('default'))

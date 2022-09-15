@@ -184,21 +184,10 @@
                         <th align="right">Amount</th>
                     </tr>
 
-                    <!-- Display The Invoice Line Items -->
-                    @foreach ($invoice->invoiceLineItems() as $item)
+                    <!-- Display The Invoice Items -->
+                    @foreach ($invoice->invoiceItems() as $item)
                         <tr class="row">
-                            @if (! $item->hasPeriod() || $item->periodStartAndEndAreEqual())
-                                <td colspan="2">
-                                    {{ $item->description }}
-                                </td>
-                            @else
-                                <td>
-                                    {{ $item->description }}
-                                </td>
-                                <td>
-                                    {{ $item->startDate() }} - {{ $item->endDate() }}
-                                </td>
-                            @endif
+                            <td colspan="2">{{ $item->description }}</td>
 
                             @if ($invoice->hasTax())
                                 <td>
@@ -217,6 +206,35 @@
                             @endif
 
                             <td>{{ $item->total() }}</td>
+                        </tr>
+                    @endforeach
+
+                    <!-- Display The Subscriptions -->
+                    @foreach ($invoice->subscriptions() as $subscription)
+                        <tr class="row">
+                            <td>{{ $subscription->description }}</td>
+                            <td>
+                                {{ $subscription->startDateAsCarbon()->toFormattedDateString() }} -
+                                {{ $subscription->endDateAsCarbon()->toFormattedDateString() }}
+                            </td>
+
+                            @if ($invoice->hasTax())
+                                <td>
+                                    @if ($inclusiveTaxPercentage = $subscription->inclusiveTaxPercentage())
+                                        {{ $inclusiveTaxPercentage }}% incl.
+                                    @endif
+
+                                    @if ($subscription->hasBothInclusiveAndExclusiveTax())
+                                        +
+                                    @endif
+
+                                    @if ($exclusiveTaxPercentage = $subscription->exclusiveTaxPercentage())
+                                        {{ $exclusiveTaxPercentage }}%
+                                    @endif
+                                </td>
+                            @endif
+
+                            <td>{{ $subscription->total() }}</td>
                         </tr>
                     @endforeach
 

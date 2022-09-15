@@ -82,7 +82,7 @@
                     >
                         <img class="w-8 h-8 rounded-full" src="/uploads/avatars/{{Auth::guard('admin')->user()->avatar}}" width="32" height="32" alt="User" />
                         <div class="flex items-center truncate">
-                            <span class="truncate ml-2 text-sm font-medium group-hover:text-slate-800">{{Auth::guard('admin')->user()->company}}</span>
+                            <span class="truncate ml-2 text-sm font-medium group-hover:text-slate-800">{{Auth::guard('admin')->user()->name}}</span>
                             <i class='bx bx-chevron-down text-xl'></i>
                         </div>
                     </button>

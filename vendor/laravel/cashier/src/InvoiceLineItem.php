@@ -146,11 +146,11 @@ class InvoiceLineItem implements Arrayable, Jsonable, JsonSerializable
     /**
      * Get a human readable date for the start date.
      *
-     * @return string|null
+     * @return string
      */
     public function startDate()
     {
-        if ($this->hasPeriod()) {
+        if ($this->isSubscription()) {
             return $this->startDateAsCarbon()->toFormattedDateString();
         }
     }
@@ -158,11 +158,11 @@ class InvoiceLineItem implements Arrayable, Jsonable, JsonSerializable
     /**
      * Get a human readable date for the end date.
      *
-     * @return string|null
+     * @return string
      */
     public function endDate()
     {
-        if ($this->hasPeriod()) {
+        if ($this->isSubscription()) {
             return $this->endDateAsCarbon()->toFormattedDateString();
         }
     }
@@ -170,11 +170,11 @@ class InvoiceLineItem implements Arrayable, Jsonable, JsonSerializable
     /**
      * Get a Carbon instance for the start date.
      *
-     * @return \Carbon\Carbon|null
+     * @return \Carbon\Carbon
      */
     public function startDateAsCarbon()
     {
-        if ($this->hasPeriod()) {
+        if ($this->isSubscription()) {
             return Carbon::createFromTimestampUTC($this->item->period->start);
         }
     }
@@ -182,33 +182,13 @@ class InvoiceLineItem implements Arrayable, Jsonable, JsonSerializable
     /**
      * Get a Carbon instance for the end date.
      *
-     * @return \Carbon\Carbon|null
+     * @return \Carbon\Carbon
      */
     public function endDateAsCarbon()
     {
-        if ($this->hasPeriod()) {
+        if ($this->isSubscription()) {
             return Carbon::createFromTimestampUTC($this->item->period->end);
         }
-    }
-
-    /**
-     * Determine if the invoice line item has a defined period.
-     *
-     * @return bool
-     */
-    public function hasPeriod()
-    {
-        return ! is_null($this->item->period);
-    }
-
-    /**
-     * Determine if the invoice line item has a period with the same start and end date.
-     *
-     * @return bool
-     */
-    public function periodStartAndEndAreEqual()
-    {
-        return $this->hasPeriod() ? $this->item->period->start === $this->item->period->end : false;
     }
 
     /**
