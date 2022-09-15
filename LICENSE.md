@@ -1,6 +1,7 @@
 # License
 
-© PuroSaaS 2022
+
+Copyright (C) PuroSaaS 2022 - All Rights Reserved.
 
 You can use this software to create your own application.
 
