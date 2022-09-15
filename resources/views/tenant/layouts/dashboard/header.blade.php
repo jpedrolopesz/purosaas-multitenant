@@ -108,7 +108,7 @@
 
                         <ul>
                             <li>
-                                <a href="{{route('tenant.account.company.profile')}}"
+                                <a href="{{route('tenant.account.profile.index')}}"
                                    class="font-medium text-sm text-indigo-500 hover:text-indigo-600 flex items-center py-1 px-3">
                                     Account
                                 </a>

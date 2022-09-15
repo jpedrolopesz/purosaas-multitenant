@@ -32,14 +32,7 @@
                             <input value="{{$user->email}}" type="text" name="email" autocomplete="name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
-                        <div class="col-span-6 sm:col-span-5">
-                            <label for="recurrence" class="block text-sm font-medium text-gray-700">Recurrence</label>
-                            <select name="recurrence" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                                <option></option>
-                                <option>Monthly</option>
-                                <option>Yearly</option>
-                            </select>
-                        </div>
+
 
                     </div>
                 </div>
