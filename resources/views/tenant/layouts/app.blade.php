@@ -21,7 +21,7 @@
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
-        <script src="{{ asset('js/index.js') }}" defer></script>
+        <script src="{{ asset('/js/index.js') }}" defer></script>
 
     </head>
     <body class="bg-gray-50">
