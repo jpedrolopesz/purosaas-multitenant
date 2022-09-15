@@ -20,4 +20,9 @@ class HomeController extends Controller
         return view('central.home.index',
             compact('plansMonthly', 'plansYearly'));
     }
+
+    public function redirect()
+    {
+        return view('central.home.redirect-site');
+    }
 }

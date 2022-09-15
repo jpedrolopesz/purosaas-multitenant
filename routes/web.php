@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 /** Homepage */
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/redirect', [HomeController::class, 'redirect'])->name('home.redirect');
 
 /** Login Domain Tenant */
 Route::get('login', [AuthenticatedHomeController::class, 'create'])->name('auth.home-login');
