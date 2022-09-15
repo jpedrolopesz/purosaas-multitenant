@@ -14,7 +14,7 @@
                     <label  class="block text-sm dark:text-white font-medium text-gray-700"> Logo </label>
                     <div class="mt-1 flex items-center">
                              <span class="inline-block h-10 w-10 rounded-full overflow-hidden bg-gray-100">
-                                 <img class="h-full w-full rounded-full" src="/uploads/avatars/{{Auth::guard('admin')->user()->logo}}"width="38" height="38" alt="User" />
+                                 <img class="h-full w-full rounded-full" src=""width="38" height="38" alt="User" />
                              </span>
                         <label class="ml-5 inline-flex items-center px-2.5 py-1.5 border border-gray-300 text-xs leading-4 font-medium rounded text-gray-700 bg-white hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50">
 
