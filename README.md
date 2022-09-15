@@ -13,9 +13,6 @@ Forget all the hard work and focus on what matters to your business, it will hel
 
 
 
-
-
-
 ## Thank you for purchasing my software
 
  If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact. Thanks so much!
@@ -23,7 +20,7 @@ Forget all the hard work and focus on what matters to your business, it will hel
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within software, please email Joao P Loes via purosaas@hotmail.com. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within software, please email via purosaas@hotmail.com. All security vulnerabilities will be promptly addressed.
 
 ## License
 
