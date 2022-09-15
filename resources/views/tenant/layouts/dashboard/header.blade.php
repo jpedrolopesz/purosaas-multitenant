@@ -104,7 +104,11 @@
                     >
                         <div class="pt-0.5 pb-2 px-3 mb-1 border-b border-slate-200">
                             <div class="font-medium text-slate-800">{{Auth::user()->name}}</div>
-                            <div class="text-xs text-slate-500 italic">Administrator</div>
+                            @if($user->is_admin)
+                                <div class="text-xs text-slate-500 italic">Administrator</div>
+                            @else
+                                <div class="text-xs text-slate-500 italic">User</div>
+                            @endif
                         </div>
 
 
