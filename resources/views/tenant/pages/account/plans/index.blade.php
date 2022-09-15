@@ -47,7 +47,7 @@
                                 <!-- CTA -->
                                 <div class="">
                                     @if (tenant()->subscribedToPrice($plan->stripe_id, 'default'))
-                                        @if (!tenant()->subscription( 'default')->cancelled())
+                                        @if (!tenant()->subscription( 'default')->cancel())
                                             <form action="{{route('tenant.subscription.cancel')}}"  method="post">
                                                 @csrf
 
