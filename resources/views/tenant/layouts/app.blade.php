@@ -16,7 +16,7 @@
 
 
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-        <link rel="stylesheet" href="{{('css/styles.css') }}">
+        <link rel="stylesheet" href="{{('/css/styles.css') }}">
 
 
         <!-- Scripts -->
