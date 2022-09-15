@@ -1,4 +1,4 @@
-@extends('layouts.guest')
+@extends('tenant.layouts.guest')
 
 
 <div class="min-h-full flex items-center bg-gray-50 justify-center py-12 px-4 sm:px-6 lg:px-8">

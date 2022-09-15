@@ -8,7 +8,7 @@
 
             <a href="/" class="relative flex items-center inline-block h-5 h-full font-black leading-none">
 
-                <span class="ml-3 text-xl text-base text-gray-800">{{env('app_name')}}<span class="text-indigo-600">.</span></span>
+                <span class="ml-3 text-xl text-base text-gray-800">{{env('APP_NAME')}}<span class="text-indigo-600">.</span></span>
             </a>
 
             <nav class="absolute top-0 left-0 z-50 flex-col items-center justify-between hidden w-full h-64 pt-5 mt-24 text-sm text-gray-800 bg-white border-t border-gray-200 shadow-xl md:shadow-none md:flex md:w-auto md:flex-row md:h-24 lg:text-base md:bg-transparent md:mt-0 md:border-none md:py-0 md:relative" :class="{'flex fixed': showMenu, 'hidden': !showMenu }">
@@ -84,8 +84,8 @@
 <!-- Section 6 -->
 <section class="text-gray-700 bg-white body-font">
     <div class="container flex flex-col items-center px-8 py-8 mx-auto max-w-7xl sm:flex-row">
-        <a href="#_" class="text-xl font-black leading-none text-gray-900 select-none logo">{{env('app_name')}}<span class="text-indigo-600">.</span></a>
-        <p class="mt-4 text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l sm:border-gray-200 sm:mt-0">© 2022 {{env('app_name')}} - Tailwindcss Page Builder
+        <a href="#_" class="text-xl font-black leading-none text-gray-900 select-none logo">{{env('APP_NAME')}}<span class="text-indigo-600">.</span></a>
+        <p class="mt-4 text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l sm:border-gray-200 sm:mt-0">© 2022 {{env('APP_NAME')}} - Tailwindcss Page Builder
         </p>
     </div>
 </section>
