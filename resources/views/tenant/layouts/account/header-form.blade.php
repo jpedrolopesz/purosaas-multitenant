@@ -4,7 +4,7 @@
             <h3 class="flex text-lg font-medium leading-6 text-gray-600">
                 <i class='bx bx-user-circle nav__icon'></i>
                 @if(isset($section_title)){{ $section_title }}
-                @else{{tenant()->company}}
+                @else{{Auth::user()->name}}
                 {{ ucwords(str_replace('-', ' ', Request::segment(2)) ?? 'profile') . ' Settings' }}
                 @endif
             </h3>

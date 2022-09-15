@@ -107,13 +107,24 @@
                             <div class="text-xs text-slate-500 italic">Administrator</div>
                         </div>
 
+
+
                         <ul>
-                            <li>
+                            @if($user->is_admin)
+                                <li>
                                 <a href="{{route('tenant.account.company.index')}}"
                                    class="font-medium text-sm text-indigo-500 hover:text-indigo-600 flex items-center py-1 px-3">
                                     Account
                                 </a>
-                            </li>
+                                </li>
+                            @else
+                                <li>
+                                <a href="{{route('tenant.account.company.profile')}}"
+                                   class="font-medium text-sm text-indigo-500 hover:text-indigo-600 flex items-center py-1 px-3">
+                                    Account
+                                </a>
+                                </li>
+                            @endif
                             <li>
 
                                 <a href=""
