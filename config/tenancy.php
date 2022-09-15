@@ -17,8 +17,8 @@ return [
      * Only relevant if you're using the domain or subdomain identification middleware.
      */
     'central_domains' => [
-        'purosaas.com',
-        //'localhost'
+        //'purosaas.com',
+        'localhost'
     ],
 
     /**
