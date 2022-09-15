@@ -104,31 +104,15 @@
                     >
                         <div class="pt-0.5 pb-2 px-3 mb-1 border-b border-slate-200">
                             <div class="font-medium text-slate-800">{{Auth::user()->name}}</div>
-                            @if($user->is_admin)
-                                <div class="text-xs text-slate-500 italic">Administrator</div>
-                            @else
-                                <div class="text-xs text-slate-500 italic">User</div>
-                            @endif
                         </div>
 
-
-
                         <ul>
-                            @if($user->is_admin)
-                                <li>
-                                <a href="{{route('tenant.account.company.index')}}"
-                                   class="font-medium text-sm text-indigo-500 hover:text-indigo-600 flex items-center py-1 px-3">
-                                    Account
-                                </a>
-                                </li>
-                            @else
-                                <li>
+                            <li>
                                 <a href="{{route('tenant.account.company.profile')}}"
                                    class="font-medium text-sm text-indigo-500 hover:text-indigo-600 flex items-center py-1 px-3">
                                     Account
                                 </a>
-                                </li>
-                            @endif
+                            </li>
                             <li>
 
                                 <a href=""
