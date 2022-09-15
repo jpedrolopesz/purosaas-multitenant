@@ -1,4 +1,4 @@
-@extends('layouts.guest')
+@extends('tenant.layouts.guest')
 
 <!--Home Tenant -->
 
@@ -10,7 +10,7 @@
 
             <a href="/" class="relative flex items-center inline-block h-5 h-full font-black leading-none">
 
-                <span class="ml-3 text-xl text-base text-gray-800">{{tenant()->company}}<span class="text-indigo-600">.</span></span>
+                <span class="ml-3 text-xl text-base text-gray-800">{{tenant()->company}}<span class="text-indigo-600">..</span></span>
             </a>
 
             <nav class="absolute top-0 left-0 z-50 flex-col items-center justify-between hidden w-full h-64 pt-5 mt-24 text-sm text-gray-800 bg-white border-t border-gray-200 shadow-xl md:shadow-none md:flex md:w-auto md:flex-row md:h-24 lg:text-base md:bg-transparent md:mt-0 md:border-none md:py-0 md:relative" :class="{'flex fixed': showMenu, 'hidden': !showMenu }">
