@@ -15,6 +15,7 @@
                 <a href="#price" class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600">Pricing</a>
                 <a href="#faq" class="font-bold duration-100 transition-color hover:text-indigo-600">FAQ</a>
                 <div class="flex flex-col block w-full font-medium border-t border-gray-200 md:hidden">
+
                     <a href="" class=" ml-2 relative z-40 inline-block w-auto h-full px-5 py-3 text-sm font-bold leading-none text-white transition-all transition duration-100 duration-300 bg-indigo-600 rounded shadow-md fold-bold sm:w-full lg:shadow-none hover:shadow-xl">
                         Purchase
                     </a>
@@ -23,7 +24,8 @@
 
             <div class="absolute left-0 flex-col items-center justify-center hidden w-full pb-8 mt-48 border-b border-gray-200 md:relative md:w-auto md:bg-transparent md:border-none md:mt-0 md:flex-row md:p-0 md:items-end md:flex md:justify-between">
 
-                <a href="" class=" ml-2 relative z-40 inline-block w-auto h-full px-5 py-3 text-sm font-bold leading-none text-white transition-all transition duration-100 duration-300 bg-indigo-600 rounded shadow-md fold-bold sm:w-full lg:shadow-none hover:shadow-xl">
+
+                <a href="" class=" btn text-white bg-indigo-500 hover:bg-indigo-600 w-full hover:shadow-xl">
                     Purchase
                 </a>
 
@@ -47,15 +49,12 @@
                 <p class="pr-0 mb-8 text-base text-gray-600 sm:text-lg xl:text-xl lg:pr-20">PuroSaas Laravel is the complete recurring billing solution. A starter kit for your next big SaaS Multi-Tenancy application.</p>
 
                 <div class="flex flex-row">
-                    <a href="{{route('auth.home-login')}}" class="relative self-start inline-block w-auto px-8 py-4 mx-auto mt-0 text-base font-bold text-white bg-indigo-600 border-t border-gray-200 rounded-md shadow-xl sm:mt-1 fold-bold lg:mx-0">
-                        Live Demo</a>
-                    <a href="" target="_blank" class="flex items-center py-4 px-6 text-base font-medium text-black transition duration-300 ease-in-out hover:opacity-70 sm:px-10">
-                        Purchase
-                        <span class="pl-2">
-                      <svg width="20" height="8" viewBox="0 0 20 8" class="fill-current">
-                        <path d="M19.2188 2.90632L17.0625 0.343819C16.875 0.125069 16.5312 0.0938193 16.2812 0.281319C16.0625 0.468819 16.0312 0.812569 16.2188 1.06257L18.25 3.46882H0.9375C0.625 3.46882 0.375 3.71882 0.375 4.03132C0.375 4.34382 0.625 4.59382 0.9375 4.59382H18.25L16.2188 7.00007C16.0312 7.21882 16.0625 7.56257 16.2812 7.78132C16.375 7.87507 16.5 7.90632 16.625 7.90632C16.7812 7.90632 16.9375 7.84382 17.0312 7.71882L19.1875 5.15632C19.75 4.46882 19.75 3.53132 19.2188 2.90632Z"></path>
-                      </svg>
+                    <a href="{{route('auth.home-login')}}" class="relative hover:shadow-xl self-start inline-block w-auto px-6 py-4 mx-auto mt-0 text-base font-bold text-white bg-indigo-500 rounded-md  sm:mt-1 lg:mx-0">
+                        Live Demo Tenancy</a>
+                    <span class="p-4">
                     </span>
+                    <a href="{{route('central.auth.login')}}" class="relative hover:shadow-xl self-start inline-block w-auto px-6 py-4 mx-auto mt-0 text-base font-bold text-white bg-indigo-500 rounded-md sm:mt-1 lg:mx-0">
+                        Live Demo Super Admin
                     </a>
                 </div>
                 <!-- Integrates with section -->
@@ -155,10 +154,10 @@
     </div>
 </section>
 
-<div class="container px-4 lg:px-8 mx-auto max-w-screen-xl text-gray-700 overflow-x-hidden">
+<div class="container px-4 lg:px-8 mx-auto max-w-screen-xl text-gray-700  overflow-x-hidden">
 
     <!-- Section 3 -->
-    <div class="md:flex mt-40 md:space-x-10 items-start">
+    <div class=" p-6 md:flex mt-40 md:space-x-10 items-start">
         <div data-aos="fade-down" class="md:w-7/12 relative ">
             <div x-data="{ open: false }" class=" ">
                 <button @click="open = true"  class="bg-blue-400 w-14 h-14 z-50 rounded-full flex items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out z-50">
@@ -199,10 +198,10 @@
                 <div class="max-w-xs mx-auto">
 
                     <div class="mt-8">
-                        <button class=" btn text-white bg-indigo-500 hover:bg-indigo-600 w-full"
-                                data-override="" data-ref="" style="outline: none;">
-                            Buy Unlimited Access - $69
-                        </button>
+                        <a href="" class=" btn text-white bg-indigo-500 hover:bg-indigo-600 w-full hover:shadow-xl">
+                            Purchase - $69
+                        </a>
+
                     </div>
                 </div>
 
@@ -212,7 +211,7 @@
     </section>
 
     <!-- Section 5 -->
-    <section>
+    <section class="p-6">
         <div class="flex flex-col md:flex-row items-center md:space-x-10 mt-16">
             <div class="flex flex-col justify-center mt-5 mb-8 md:mt-0 sm:w-1/2 md:w-7/12 sm:pr-16">
                 <p class="mb-2 text-sm font-semibold leading-none text-left text-indigo-600 uppercase">Still having doubts?</p>
@@ -302,10 +301,9 @@
                 <div class="max-w-xs mx-auto">
 
                     <div class="mt-8">
-                        <button class=" btn text-white bg-indigo-500 hover:bg-indigo-600 w-full"
-                                data-override="" data-ref="" style="outline: none;">
-                            Buy Unlimited Access - $69
-                        </button>
+                        <a href="" class=" btn text-white bg-indigo-500 hover:bg-indigo-600 w-full hover:shadow-xl">
+                            Purchase - $69
+                        </a>
                     </div>
                 </div>
 
