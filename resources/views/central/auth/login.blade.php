@@ -1,7 +1,10 @@
 @extends('layouts.guest')
 <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
     <div class="max-w-md w-full space-y-8">
+
         <div>
+            <img src="/img/logo-purosaas.png" class="mx-auto h-12 w-auto">
+
             <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Login to your administrative account</h2>
 
         </div>
@@ -14,7 +17,7 @@
                 <div class="mt-6">
                     <label for="email-address" class="sr-only">Email address</label>
                     <div class="mt-1 flex rounded-md shadow-sm">
-                        <input placeholder="Email address" id="email-address" name="email" type="email" value="{{ old('email-address', '') }}" autocomplete="email" required
+                        <input placeholder="Email address" id="email-address" name="email" type="email" value="{{ old('email-address', 'superadmin@demo.com') }}" autocomplete="email" required
                                class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"/>
                     </div>
                     @error('email-address')
@@ -26,7 +29,7 @@
                 <div class="mt-6">
                     <label for="password" class="sr-only">Password</label>
                     <div class="mt-1 flex rounded-md shadow-sm">
-                        <input placeholder="Password" id="password" type="password" name="password" required autocomplete="new-password"
+                        <input placeholder="demo1234" id="password" type="password" name="password" required autocomplete="new-password"  value="{{ old('password', 'demo1234') }}"
                                class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"/>
                     </div>
                     @error('password')

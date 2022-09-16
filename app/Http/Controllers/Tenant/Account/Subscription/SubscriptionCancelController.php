@@ -12,11 +12,10 @@ class SubscriptionCancelController extends Controller
 
     public function cancel(Request $request)
     {
-     $subscription = tenant()->subscription('default');
 
-     $subscription->cancel();
+     return back()
+        ->with('info', 'You are in the demo version. It is not possible to make a changes.');
 
-     return back();
     }
 
 

@@ -3,6 +3,8 @@
     <div class="max-w-md w-full space-y-8">
         <div>
 
+            <img src="/img/logo-purosaas.png" class="mx-auto h-12 w-auto">
+
             <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
 
         </div>
@@ -15,7 +17,7 @@
                 <div class="mt-6">
                     <label for="domain" class="sr-only">Domain</label>
                     <div class="mt-1 flex rounded-md shadow-sm">
-                        <input placeholder="Domain" id="domain" name="domain" type="domain" value="{{ old('domain', '') }}" autocomplete="domain" required
+                        <input placeholder="Domain" id="domain" name="domain" type="domain" value="{{ old('domain', 'tenancy-two') }}" autocomplete="domain" required
                                class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"/>
                         <span class="flex items-center px-3 rounded-r-md border-t border-b border-r border-gray-300 bg-gray-50 text-gray-500 text-sm">
                             <span>

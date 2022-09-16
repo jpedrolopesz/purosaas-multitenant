@@ -15,6 +15,7 @@
             @csrf
             <input type="hidden" name="remember" value="true">
             <div class="-space-y-px">
+                @include('components.component-alert')
 
                 <!-- Name Company -->
                 <div class="mt-6">

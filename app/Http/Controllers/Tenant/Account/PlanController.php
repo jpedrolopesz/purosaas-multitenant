@@ -39,21 +39,8 @@ class PlanController extends Controller
 
     public function  store(Request $request)
     {
-        $plan = tenancy()->central(function () use($request) {
+        return redirect()->back()->with('info', 'You are in the demo version. It is not possible to make a changes.');
 
-            return Plan::where('slug', $request->plan_id)->first();
-
-        });
-        try {
-            tenant()->subscription('default')->swapAndInvoice($request->plan);
-        } catch (IncompletePayment $e) {
-            return redirect()->route('cashier.payment',
-                [$e->payment->id,
-                    'redirect' => route('tenant.pages.account.plans.index')
-                ]);
-
-        }
-        return back();
     }
 
 

@@ -21,13 +21,9 @@ class SubscriptionCardController extends Controller
 
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'token' => 'required'
-        ]);
 
-        tenant()->updateDefaultPaymentMethod($request->token);
+        return redirect()->back()
+        ->with('info', 'You are in the demo version. It is not possible to make a changes.');
 
-        //toast('Card successfully updated.','success')->timerProgressBar();
-        return redirect()->back();
     }
 }

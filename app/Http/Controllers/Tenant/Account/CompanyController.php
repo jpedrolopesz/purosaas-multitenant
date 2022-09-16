@@ -18,21 +18,10 @@ class CompanyController extends Controller //tenant
 
     public function store(Request $request)
     {
-        if($request->hasFile('logo')){
-            $logo = $request->file('logo');
-            $filename = time(). '.' . $logo->getClientOriginalExtension();
-            Image::make($logo)->resize(80,80)->save(public_path('uploads/avatars/'. $filename));
-
-            $company = tenant();
-            $company->logo = $filename;
-            $company->save();
-
-        }
-
-        $tenant = tenant()->update($request->only(['company','email']));
 
 
-        return redirect()->back()->with('success', 'Your data has been successfully updated.');
+
+        return redirect()->back()->with('info', 'You are in the demo version. It is not possible to make a changes.');
 
 
     }

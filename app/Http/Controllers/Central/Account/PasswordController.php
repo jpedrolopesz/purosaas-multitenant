@@ -16,12 +16,8 @@ class PasswordController extends Controller
 
     public function store(PasswordAdminStoreRequest $request)
     {
-        $admin = Auth::guard('admin')->user()->update([
-            'password'=>bcrypt($request->password)
-        ]);
-
-
-        return redirect()->back()->with('success', 'Your data has been successfully updated.');
+        return redirect()->back()
+            ->with('info', 'You are in the demo version. It is not possible to make a changes.');
 
     }
 }

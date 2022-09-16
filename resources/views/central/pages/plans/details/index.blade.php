@@ -73,6 +73,8 @@
         </div>
 
         <div class="px-2 py-3 sm:px-3">
+            @include('components.component-alert')
+
             <div class=" relative overflow-x-auto shadow-md md:rounded-md">
                 <table class="table-auto w-full  text-sm text-left text-gray-500 ">
                     <thead class="w-full text-sm bg-gray-50 text-left text-gray-500 uppercase text-slate-500 bg-slate-50  border-b border-slate-200">

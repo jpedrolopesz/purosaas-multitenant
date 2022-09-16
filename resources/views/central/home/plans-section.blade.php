@@ -40,7 +40,7 @@
                         </nav>
                         <div class="flex flex-col mt-auto">
                             <a class="btn bg-indigo-500 hover:bg-indigo-600 text-white"
-                               href="{{route('auth.register')}}">Free trial</a>
+                               href="{{route('auth.home-login')}}">Free trial</a>
                             <p class="w-full mt-3 text-xs text-center text-gray-400">Free trial no need to register credit card</p>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                         </nav>
                         <div class="flex flex-col mt-auto">
                             <a class="btn bg-indigo-500 hover:bg-indigo-600 text-white"
-                               href="{{route('auth.register')}}">Free trial</a>
+                               href="{{route('auth.home-login')}}">Free trial</a>
                             <p class="w-full mt-3 text-xs text-center text-gray-400">Free trial no need to register credit card</p>
                         </div>
                     </div>

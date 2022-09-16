@@ -30,12 +30,12 @@ class CreatePlanController extends Controller
 
     public function store(StoreUpdatePlanRequest $request)
     {
-        $data = $request->all();
-        $data['url'] = Str::kebab($request->name);
-        $this->repository->create($data);
+
+
 
         return redirect()->route('central.pages.plans.index')
-            ->with('success', 'Your plan has been created successfully');
+            ->with('info', 'You are in the demo version. It is not possible to make a changes.');
+
     }
 
     public function show($id)
@@ -63,29 +63,17 @@ class CreatePlanController extends Controller
 
     public function update(StoreUpdatePlanRequest $request, $id)
     {
-        $plan = $this->repository->where('id', $id)->first();
-
-        if (!$plan)
-            return redirect()->back();
-
-        $plan->update($request->all());
 
         return redirect()->route('central.pages.plans.index')
-            ->with('success', 'Plan successfully updated');
+            ->with('info', 'You are in the demo version. It is not possible to make a changes.');
+
     }
 
     public function destroy($id)
     {
-        $plan = $this->repository->where('id', $id)->first();
 
-        if (!$plan)
-            return redirect()->back();
-
-
-        $plan -> delete();
-
-        return redirect()->back()->with('success', 'Plan successfully deleted');
-
+        return redirect()->back()
+            ->with('info', 'You are in the demo version. It is not possible to make a changes.');
 
     }
 

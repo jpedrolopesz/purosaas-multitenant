@@ -37,11 +37,10 @@ class DetailPlanController extends Controller
 
     public function store(StoreUpdateDetailPlanRequest $request, $idPlan)
     {
-        if(!$plan = $this->plans->where('id', $idPlan)->first()){
-            return redirect()->back();
-        }
-        $plan->details()->create($request->all());
-        return redirect()->route('central.pages.plans.details.index', $plan->id);
+
+        return redirect()->route('central.pages.plans.details.index', $plan->id)
+            ->with('info', 'You are in the demo version. It is not possible to make a changes.');
+
     }
 
     public function edit($idPlan, $idDetail)
@@ -67,23 +66,18 @@ class DetailPlanController extends Controller
         if(!$plan || !$detail){
             return redirect()->back();
         }
-        $detail->update($request->all());
-        return redirect()->route('central.pages.plans.details.index', $plan->id);
+        return redirect()->route('central.pages.plans.details.index', $plan->id)
+            ->with('info', 'You are in the demo version. It is not possible to make a changes.');
+
 
     }
 
     public function destroy($idPlan, $idDetail)
     {
-        $plan = $this->plans->where('id', $idPlan)->first();
-        $detail = $this->repository->find($idDetail);
 
-        if (!$plan || !$detail) {
-            return redirect()->back();
-        }
+        return redirect()->back()
+            ->with('info', 'You are in the demo version. It is not possible to make a changes.');
 
-        $detail->delete();
-
-        return redirect()->back();
     }
 
 }

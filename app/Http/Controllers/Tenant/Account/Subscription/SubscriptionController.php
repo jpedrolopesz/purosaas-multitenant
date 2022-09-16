@@ -28,28 +28,10 @@ class SubscriptionController extends Controller
      */
     public function processSubscription(Request $request)
     {
-        $this->validate($request, [
-            'token' => 'required',
-      ]);
-
-        $plan = tenancy()->central(function () use($request){
-            return Plan::findOrFail($request->input('billing_plan_id'));
-        });
-
-            try {
-                tenant()
-                    ->newSubscription('default', $plan->stripe_id)
-                    ->create($request->token);
-            } catch (IncompletePayment $e) {
-                return redirect()->route('cashier.payment',
-                    [$e->payment->id,
-                        'redirect' => route('tenant.pages.account.profile.index')
-                    ]);
-
-        }
-
         return redirect()->route('tenant.account.plans.index')
-            ->with('success', 'Your data has been successfully updated.');
+            ->with('info', 'You are in the demo version. It is not possible to make a changes.');
+
+
     }
 
 

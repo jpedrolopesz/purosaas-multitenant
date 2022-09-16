@@ -33,27 +33,8 @@ class TeamController extends Controller //tenant
     public function store(Request $request, Tenant $tenant)
     {
 
-        $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'is_admin' => ['required'],
-            'password' => ['required', 'confirmed'],
-        ]);
 
-        if($this->teamLimitReached($request)){
-
-            return back()
-                ->with('error', 'You have reached the limit team for your plan.');
-        }
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'is_admin' => $request->is_admin,
-            'password' => Hash::make($request->password),
-        ]);
-
-        return redirect()->back()
-            ->with('success', 'Your data has been successfully updated.');
+        return redirect()->back()->with('info', 'You are in the demo version. It is not possible to make a changes.');
 
 
     }
@@ -89,28 +70,18 @@ class TeamController extends Controller //tenant
 
     public function update(Request $request, $id)
     {
-        $user = $this->repository->where('id', $id)->first();
-
-        if (!$user)
-            return redirect()->back();
-
-        $user->update($request->all());
 
         return redirect()->route('tenant.account.team.index')
-            ->with('success', 'User successfully updated');
+            ->with('info', 'You are in the demo version. It is not possible to make a changes.');
+
     }
 
     public function destroy($id)
     {
-        $user = $this->repository->where('id', $id)->first();
-
-        if (!$user)
-            return redirect()->back();
-
-        $user-> delete();
 
         return redirect()->back()
-            ->with('success', 'User successfully deleted');
+            ->with('info', 'You are in the demo version. It is not possible to make a changes.');
+
     }
 
 }

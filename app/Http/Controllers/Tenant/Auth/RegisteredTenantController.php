@@ -34,17 +34,9 @@ class RegisteredTenantController extends Controller
     {
 
 
-        $tenant = Tenant::create($request->validated() + [
-                'ready' => false,
-                'trial_ends_at' => now()->addDays(config('cashier.trial_days')),
-            ]);
-        $tenant->createDomain(['domain' => $request->domain]);
+        return redirect()->back()
+            ->with('info', 'You are in the demo version. It is not possible to make a changes.');
 
-        event(new Registered($tenant));
-
-
-        return redirect(tenant_route($tenant->domains->first()
-            ->domain, 'tenant.auth.login' ));
 
     }
 }

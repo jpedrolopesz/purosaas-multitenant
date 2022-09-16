@@ -16,21 +16,9 @@ class UserController extends Controller
 
     public function store(UserStoreRequest  $request)
     {
-        if($request->hasFile('avatar')){
-            $avatar = $request->file('avatar');
-            $filename = time(). '.' . $avatar->getClientOriginalExtension();
-            Image::make($avatar)->resize(80,80)->save(public_path('uploads/avatars/'. $filename));
 
-            $user = Auth::user();
-            $user->avatar = $filename;
-            $user->save();
-
-        }
-
-        $request->user()->update($request->only('name', 'email'));
-
-
-        return redirect()->back()->with('success', 'Your data has been successfully updated.');
+        return redirect()->back()
+            ->with('info', 'You are in the demo version. It is not possible to make a changes.');
 
     }
 }
