@@ -22,6 +22,9 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/index.js') }}" defer></script>
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/22712815.js"></script>
+    <!-- End of HubSpot Embed Code -->
 </head>
 <body class="bg-gray-50">
 
@@ -38,8 +41,6 @@
             @yield('content')
     </main>
 </div>
-<!-- Start of HubSpot Embed Code -->
-<script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/22712815.js"></script>
-<!-- End of HubSpot Embed Code -->
+
 </body>
 </html>

@@ -28,12 +28,13 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
 
         <script src="https://js.stripe.com/v3/"></script>
+        <!-- Start of HubSpot Embed Code -->
+        <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/22712815.js"></script>
+        <!-- End of HubSpot Embed Code -->
+
 
     </head>
     <body>
-    <!-- Start of HubSpot Embed Code -->
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/22712815.js"></script>
-    <!-- End of HubSpot Embed Code -->
 
     </body>
 </html>
