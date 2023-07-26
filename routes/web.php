@@ -19,8 +19,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/redirect', [HomeController::class, 'redirect'])->name('home.redirect');
 
 /** Login Domain Tenant */
-Route::get('login', [AuthenticatedHomeController::class, 'create'])->name('auth.home-login');
-Route::post('login', [AuthenticatedHomeController::class, 'store'])->name('auth.home-login');
+Route::get('/login', [AuthenticatedHomeController::class, 'create'])->name('auth.home-login');
+Route::post('/login', [AuthenticatedHomeController::class, 'store'])->name('auth.home-login');
 
 
 /** Register Tenant */
