@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Tenant\RegisterTenantRequest;
 use App\Models\Tenant;
 use Illuminate\Auth\Events\Registered;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 
 
 class RegisteredTenantController extends Controller
