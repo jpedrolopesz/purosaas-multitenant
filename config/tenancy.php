@@ -18,7 +18,7 @@ return [
      */
     'central_domains' => [
         //'domain.com',
-        '67.205.180.2',
+        'purosaas.com',
     ],
 
     /**
