@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Jobs\SyncStripeCustomerDetails;
 use Illuminate\Auth\Notifications\VerifyEmail;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -10,7 +11,6 @@ use Illuminate\Notifications\Notifiable;
 
 use Laravel\Cashier\Billable;
 use Laravel\Sanctum\HasApiTokens;
-use function Illuminate\Events\queueable;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -30,14 +30,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'is_admin'
     ];
 
-    protected static function booted()
-    {
-        static::updated(queueable(function ($user) {
-            if ($user->hasStripeId()) {
-                $user->syncStripeCustomerDetails();
-            }
-        }));
-    }
+
 
     /**
      * The attributes that should be hidden for serialization.
@@ -57,6 +50,22 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public static function booted()
+    {
+        static::updating(function (self $user) {
+            Tenant::where('email', $user->getOriginal('email'))
+                ->update($user->only(['email']));
+        });
+
+        static::updated(function ($user) {
+            if ($user->hasStripeId()) {
+                SyncStripeCustomerDetails::dispatch($user);
+            }
+        });
+    }
+
+
 
     public function sendEmailVerificationNotification()
     {
