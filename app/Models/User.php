@@ -10,6 +10,7 @@ use Illuminate\Notifications\Notifiable;
 
 use Laravel\Cashier\Billable;
 use Laravel\Sanctum\HasApiTokens;
+use function Illuminate\Events\queueable;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -28,6 +29,15 @@ class User extends Authenticatable implements MustVerifyEmail
         'logo',
         'is_admin'
     ];
+
+    protected static function booted()
+    {
+        static::updated(queueable(function ($user) {
+            if ($user->hasStripeId()) {
+                $user->syncStripeCustomerDetails();
+            }
+        }));
+    }
 
     /**
      * The attributes that should be hidden for serialization.
