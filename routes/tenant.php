@@ -28,7 +28,8 @@ use Stancl\Tenancy\Middleware\PreventAccessFromCentralDomains;
 
 Route::group(['as' => 'tenant.', 'middleware' => ['web',
     InitializeTenancyByDomain::class,
-    PreventAccessFromCentralDomains::class,]
+    PreventAccessFromCentralDomains::class,
+    ]
 ], function (){
 
     Auth::routes(['verify' => true]);
