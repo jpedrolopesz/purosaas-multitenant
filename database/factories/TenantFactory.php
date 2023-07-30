@@ -23,15 +23,11 @@ class TenantFactory extends Factory
     public function definition()
     {
         return [
-            'id' => $this->faker->uuid,
+            'company' => $this->faker->company,
+            'domain' => $this->faker->domainName,
+            'name' => $this->faker->name,
             'email' => $this->faker->unique()->safeEmail,
-            'stripe_id' => Str::random(10), // Substitua conforme necessário
-            'pm_type' => $this->faker->creditCardType,
-            'pm_last_four' => substr($this->faker->creditCardNumber, -4),
-            'trial_ends_at' => now()->addDays(10),
-            'data' => json_encode($this->faker->sentence), // Substitua conforme necessário
-            'created_at' => now(),
-            'updated_at' => now(),
+            'password' => bcrypt('password'), // password
         ];
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Laravel\Cashier\Billable;
 use Laravel\Cashier\Subscription;
 use Stancl\Tenancy\Database\Models\Tenant as BaseTenant;
@@ -13,7 +14,7 @@ use Stancl\Tenancy\Database\Concerns\HasDomains;
 
 class Tenant extends BaseTenant implements TenantWithDatabase
 {
-    use HasDatabase, HasDomains, Billable;
+    use HasDatabase, HasDomains, HasFactory, Billable;
 
     protected $casts = [
         'trial_ends_at' => 'datetime',
