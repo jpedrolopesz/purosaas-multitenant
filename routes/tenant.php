@@ -79,12 +79,12 @@ Route::group(['as' => 'tenant.', 'middleware' => ['web',
     Route::get('/',[HomeController::class, 'index'])->name('index');
 
     /** Dashboard */
-    Route::group(['prefix' => 'dashboard', 'middleware' => ['auth','verified'],'as' => 'dashboard.'], function (){
+    Route::group(['prefix' => 'dashboard', 'middleware' => ['auth'],'as' => 'dashboard.'], function (){
         Route::get('/', [TenantController::class, 'index'])->name('dashboard');
     });
 
     /** Subscription */
-    Route::group(['prefix' => 'subscription', 'middleware' => ['auth','verified'],'as' => 'subscription.'], function (){
+    Route::group(['prefix' => 'subscription', 'middleware' => ['auth'],'as' => 'subscription.'], function (){
         Route::get('/{plan_id}', [SubscriptionController::class, 'subscription'])->name('subscription');
         Route::post('/', [SubscriptionController::class, 'processSubscription'])->name('process');
         Route::post('/cancel', [SubscriptionCancelController::class, 'cancel'])->name('cancel');

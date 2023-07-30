@@ -8,16 +8,18 @@
             <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
 
         </div>
+
         <form class="mt-8 space-y-6" action="{{ route('auth.home-login') }}" method="POST">
             @csrf
             <input type="hidden" name="remember" value="true">
             <div class="-space-y-px">
 
+
                 <!-- Login Domain-->
                 <div class="mt-6">
                     <label for="domain" class="sr-only">Domain</label>
                     <div class="mt-1 flex rounded-md shadow-sm">
-                        <input placeholder="Domain" id="domain" name="domain" type="domain" value="{{ old('domain', 'tenancy-two') }}" autocomplete="domain" required
+                        <input placeholder="Domain" id="domain" name="domain" type="domain" value="{{ old('domain', 'tenant-one') }}" autocomplete="domain" required
                                class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"/>
                         <span class="flex items-center px-3 rounded-r-md border-t border-b border-r border-gray-300 bg-gray-50 text-gray-500 text-sm">
                             <span>
@@ -55,6 +57,18 @@
                 </button>
             </div>
         </form>
+        <section>
+            <div >
+                <h3 class="font-semibold mt-4">Demo</h3>
+                <div class="hover:border-gray-500 hover:border-solid hover:bg-white hover:text-gray-500 group w-full flex flex-col items-center justify-center rounded-md border-2 border-dashed border-slate-300 text-sm leading-6 text-slate-900 font-medium py-3">
+                    <div class="flex">
+                        <span>Domain: </span><span class="underline ml-2">tenant-one</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
     </div>
+
 </div>
 
