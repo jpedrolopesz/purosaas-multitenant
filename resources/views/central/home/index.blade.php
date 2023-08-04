@@ -200,6 +200,7 @@
                     <div class="mt-8">
                         <a href="https://app.gumroad.com/checkout?product=nagld&quantity=1" class=" btn text-white text-center font-bold bg-indigo-500 hover:bg-indigo-600 w-full hover:shadow-xl">
                             Buy Now - $39
+                        </a>
 
                     </div>
                 </div>
