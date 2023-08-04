@@ -189,7 +189,7 @@
                 <div class="text-center mb-16">
                     <h1 class="w-full text-3xl font-bold text-center sm:text-4xl md:text-5xl">
                         Get unlimited access for
-                        <span class="text-6xl md:text-4xl text-gray-400 line-through">$97</span> <span class="relative">$69 <span class="hidden lg:block absolute left-0 bottom-full text-xs font-bold text-white bg-green-500 py-1 px-2 rounded uppercase transform rotate-3 tracking-normal mb-3 ml-4" style="min-width: 150px;">Limited time offer<svg class="absolute top-full fill-current text-green-500" width="8" height="6" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h8v6z"></path></svg></span></span></h1>
+                        <span class="text-6xl md:text-4xl text-gray-400 line-through">$97</span> <span class="relative">$39 <span class="hidden lg:block absolute left-0 bottom-full text-xs font-bold text-white bg-green-500 py-1 px-2 rounded uppercase transform rotate-3 tracking-normal mb-3 ml-4" style="min-width: 150px;">Limited time offer<svg class="absolute top-full fill-current text-green-500" width="8" height="6" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h8v6z"></path></svg></span></span></h1>
                     <div class="max-w-3xl mx-auto">
                         <p class="text-xl text-gray-600 mb-6">
                             Buy now and get instant access and lifetime updates.</p>
@@ -198,9 +198,8 @@
                 <div class="max-w-xs mx-auto">
 
                     <div class="mt-8">
-                        <a href="" class=" btn text-white bg-indigo-500 hover:bg-indigo-600 w-full hover:shadow-xl">
-                            Purchase - $69
-                        </a>
+                        <a href="https://app.gumroad.com/checkout?product=nagld&quantity=1" class=" btn text-white text-center font-bold bg-indigo-500 hover:bg-indigo-600 w-full hover:shadow-xl">
+                            Buy Now - $39
 
                     </div>
                 </div>
@@ -292,7 +291,7 @@
                 <div class="text-center mb-16">
                     <h1 class="w-full text-3xl font-bold text-center sm:text-4xl md:text-5xl">
                         Get unlimited access for
-                        <span class="text-6xl md:text-4xl text-gray-400 line-through">$97</span> <span class="relative">$69 <span class="hidden lg:block absolute left-0 bottom-full text-xs font-bold text-white bg-green-500 py-1 px-2 rounded uppercase transform rotate-3 tracking-normal mb-3 ml-4" style="min-width: 150px;">Limited time offer<svg class="absolute top-full fill-current text-green-500" width="8" height="6" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h8v6z"></path></svg></span></span></h1>
+                        <span class="text-6xl md:text-4xl text-gray-400 line-through">$97</span> <span class="relative">$39 <span class="hidden lg:block absolute left-0 bottom-full text-xs font-bold text-white bg-green-500 py-1 px-2 rounded uppercase transform rotate-3 tracking-normal mb-3 ml-4" style="min-width: 150px;">Limited time offer<svg class="absolute top-full fill-current text-green-500" width="8" height="6" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h8v6z"></path></svg></span></span></h1>
                     <div class="max-w-3xl mx-auto">
                         <p class="text-xl text-gray-600 mb-6">
                             Buy now and get instant access and lifetime updates.</p>
