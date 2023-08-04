@@ -16,7 +16,7 @@
                 <a href="#faq" class="font-bold duration-100 transition-color hover:text-indigo-600">FAQ</a>
                 <div class="flex flex-col block w-full font-medium border-t border-gray-200 md:hidden">
 
-                    <a href="https://purosaas.gumroad.com/l/nagld" class=" ml-2 relative z-40 inline-block w-auto h-full px-5 py-3 text-sm font-bold leading-none text-white transition-all transition duration-100 duration-300 bg-indigo-600 rounded shadow-md fold-bold sm:w-full lg:shadow-none hover:shadow-xl">
+                    <a href="https://app.gumroad.com/checkout?product=nagld&quantity=1" class=" ml-2 relative z-40 inline-block w-auto h-full px-5 py-3 text-sm font-bold leading-none text-white transition-all transition duration-100 duration-300 bg-indigo-600 rounded shadow-md fold-bold sm:w-full lg:shadow-none hover:shadow-xl">
                         Buy Now
                     </a>
                 </div>
@@ -25,7 +25,7 @@
             <div class="absolute left-0 flex-col items-center justify-center hidden w-full pb-8 mt-48 border-b border-gray-200 md:relative md:w-auto md:bg-transparent md:border-none md:mt-0 md:flex-row md:p-0 md:items-end md:flex md:justify-between">
 
 
-                <a href="https://purosaas.gumroad.com/l/nagld" class=" btn text-white bg-indigo-500 hover:bg-indigo-600 w-full hover:shadow-xl">
+                <a href="https://app.gumroad.com/checkout?product=nagld&quantity=1" class=" btn text-white bg-indigo-500 hover:bg-indigo-600 w-full hover:shadow-xl">
                     Buy Now
                 </a>
 
@@ -301,7 +301,7 @@
                 <div class="max-w-xs mx-auto">
 
                     <div class="mt-8">
-                        <a href="https://purosaas.gumroad.com/l/nagld" class=" btn text-white text-center font-bold bg-indigo-500 hover:bg-indigo-600 w-full hover:shadow-xl">
+                        <a href="https://app.gumroad.com/checkout?product=nagld&quantity=1" class=" btn text-white text-center font-bold bg-indigo-500 hover:bg-indigo-600 w-full hover:shadow-xl">
                             Buy Now - $39
                         </a>
                     </div>
